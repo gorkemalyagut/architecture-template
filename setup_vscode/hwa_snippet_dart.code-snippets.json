@@ -1,0 +1,125 @@
+{
+	"Magic number": {
+		"scope": "dart",
+		"prefix": "hwaMagicNumber",
+		"body": "static const $1 = $2;",
+		"description": "Hwa Magic Number Create"
+	},
+	"SIngleton Eager": {
+		"scope": "dart",
+		"prefix": "hwaEager",
+		"body": [
+			"class $1 {",
+			"static $1? _instance;",
+			"static $1 get instance {",
+			" _instance ??= VB._init();",
+			"return _instance!;",
+			"}",
+			"$1._init();",
+			"}"
+		],
+		"description": "Hwa Magic Number Create"
+	},
+	"Base View Model": {
+		"scope": "dart",
+		"prefix": "hwaBaseViewModel",
+		"body": [
+			"void setContext(BuildContext context) => this.context = context;",
+			"void init() {}"
+		]
+	},
+	"Base View ": {
+		"scope": "dart",
+		"prefix": "hwaBaseView",
+		"body": [
+			"BaseView<$1>(",
+			"model: $1(),",
+			"onModelReady: (model) {",
+			" model.setContext(context);",
+			" model.init();",
+			"},",
+			"builder: (BuildContext context,$1 value) => Scaffold(),",
+			");"
+		]
+	},
+	"Base Model ": {
+		"scope": "dart",
+		"prefix": "hwaBaseModel",
+		"body": [
+			"import 'package:json_annotation/json_annotation.dart';",
+			"part '$1.g.dart';",
+			"",
+			"@JsonSerializable()",
+			"class $2 extends INetworkModel<$2> {",
+			"@override",
+			"$2 fromJson(Map<String, dynamic> json) {",
+			"return _$$2FromJson(json);",
+			"}",
+			"@override",
+			"Map<String, dynamic> toJson() {",
+			"return _$$2ToJson(this);",
+			"}",
+			"}",
+		]
+	},
+	"Base Test": {
+		"scope": "dart",
+		"prefix": "hwaTest",
+		"body": [
+			"import 'package:flutter_test/flutter_test.dart';",
+			"void main() {",
+			"setUp(() {});",
+			"test('Sample Test', () {});",
+			"}",
+		]
+	},
+	"Hwa Extension": {
+		"scope": "dart",
+		"prefix": "hwaExtension",
+		"body": [
+			"import 'package:kartal/kartal.dart';",
+			"import 'package:easy_localization/easy_localization.dart';"
+		]
+	},
+	"Flutter from json factory": {
+		"scope": "dart",
+		"prefix": "hwaflutterFromJson",
+		"body": [
+			"factory $1.fromJson(Map<String, dynamic> json) {",
+			"return _$$1FromJson(json);",
+			"}"
+		]
+	},
+	"Flutter change loading": {
+		"scope": "dart",
+		"prefix": "fcl",
+		"body": [
+			"bool isLoading = false;",
+			"void changeLoading() {",
+			"setState(() {",
+			"isLoading = !isLoading;",
+			"});",
+			"}",
+		]
+	},
+	"Flutter scaffold base": {
+		"scope": "dart",
+		"prefix": "hwaFSM",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"class $1View extends StatefulWidget {",
+			"const $1View({Key? key}) : super(key: key);",
+			"@override",
+			"State<$1View> createState() => _$1ViewState();",
+			"}",
+			"class _$1ViewState extends State<$1View> {",
+			"@override",
+			"Widget build(BuildContext context) {",
+			"return Scaffold(",
+			"appBar: AppBar(),",
+			");",
+			"}",
+			"}"
+		]
+	},
+}
